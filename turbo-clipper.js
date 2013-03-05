@@ -8,7 +8,7 @@ javascript:void(function(){
 		proto:
 		{
 			regex: "",
-			id:"everclipper",
+			id:"turboClipper",
 			getForm:function()
 			{
 				jQuery('body').append('<form id="'+this.id+'" style="display:none" action="https://www.evernote.com/clip.action" method="POST"><input type="text" name="url" value="'+this.getLocation()+'"><input type="text" name="title" value="'+this.getTitle()+'"><textarea name="body">'+this.getBody()+'</textarea></form>');
@@ -29,7 +29,7 @@ javascript:void(function(){
 			},
 			getBody: function()
 			{
-				return "Everclipper Default Body";
+				return "turboClipper Default Body";
 			}
 		},
 		services:[],
@@ -69,7 +69,7 @@ javascript:void(function(){
 	// Here we can add new providers for various webpages.
 
 	// Unusual hostels of the world, location for easy pasting to location window
-	everclipper.register({regex:'//www.unusualhotelsoftheworld.com',
+	turboClipper.register({regex:'//www.unusualhotelsoftheworld.com',
 	getBody: function() {
 		// Location - important for me.
 		initializeGoogleMap();
@@ -100,7 +100,7 @@ javascript:void(function(){
 	
 	
 	//Facebook photos
-	everclipper.register({regex:'//www.facebook.com/photo.php',
+	turboClipper.register({regex:'//www.facebook.com/photo.php',
 	getBody: function() {
 		var out = String($(".hasCaption").html()) + "<br>";
 		out = out + "<img src='" + String(jQuery("#fbPhotoImage")[0].src) + "'>";
@@ -109,7 +109,7 @@ javascript:void(function(){
 	
 	
 	//OpenCaching.pl
-	everclipper.register({regex:'opencaching.pl/viewcache.php?',
+	turboClipper.register({regex:'opencaching.pl/viewcache.php?',
 	getTitle: function() {
 		return jQuery(".content-title-noshade-size5").text();
 	},
