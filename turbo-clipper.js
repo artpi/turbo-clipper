@@ -1,9 +1,9 @@
-//javascript:(function(){try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src='http://localhost/test/everclipper.js';document.getElementsByTagName('head')[0].appendChild(x);}catch(e){}})();
+//javascript:(function(){try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src='https://raw.github.com/artpi/turbo-clipper/master/turbo-clipper.js';document.getElementsByTagName('head')[0].appendChild(x);}catch(e){}})();
 
 javascript:void(function(){
 	
 	// Main Object
-	var turbo-clipper=
+	var turboClipper=
 	{
 		proto:
 		{
@@ -133,12 +133,12 @@ javascript:void(function(){
 		jQscript.src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js';
 		document.documentElement.appendChild(jQscript);
 		jQscript.addEventListener('load', function (e) { 
-			turbo-clipper.run(document.location.href);
+			turboClipper.run(document.location.href);
 		}, false);
 	}
 	else
 	{
-		turbo-clipper.run(document.location.href);
+		turboClipper.run(document.location.href);
 	}
 	
 }());
