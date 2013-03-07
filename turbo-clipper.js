@@ -119,7 +119,22 @@ javascript:void(function(){
 		out = out + String($("#viewcache-description").html()) + "<br>";
 		return out;
 	}});
-	
+
+
+
+	//Instagram!
+	turboClipper.register({regex:'http://instagram.com/',
+	getBody: function() {
+		var dane="";
+		jQuery("div.image").each(function (index,val) {
+			obrazek=$(val).css('background-image').match(/\((.*?)\)/);
+			if(obrazek!=null)
+			{
+				dane=dane+"<img src="+obrazek[1]+"><br><br>";
+			}
+		});
+		return dane;
+	}});	
 	
 	
 	
